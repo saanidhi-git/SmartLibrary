@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - SmartLib</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Signup Popup -->
+  <div class="login-overlay" id="signupOverlay">
+    <div class="login-box">
+      <span class="close-btn" onclick="closeSignup()">&times;</span>
+      <img src="images/logo.jpg" alt="Library Logo">
+      <h2>Sign Up for SmartLib</h2>
+      <form>
+        <label for="signupRole">Select Role:</label>
+        <select id="signupRole" required>
+          <option value="">-- Choose Role --</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+        <button type="submit" class="login-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function closeSignup() {
+      document.getElementById("signupOverlay").style.display = "none";
+    }
+  </script>
+</body>
+</html>

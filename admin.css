@@ -1,0 +1,166 @@
+:root {
+  --light1: #E9F5DB;
+  --mid1: #B5C99A;
+  --mid2: #97A97C;
+  --dark1: #87986A;
+  --dark2: #718355;
+  --text: #1e1e1e;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  background: 
+    linear-gradient(to right, rgba(233, 245, 219, 0.9), rgba(181, 201, 154, 0.9)),
+    url('library_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header {
+  background-color: rgba(113, 131, 85, 0.95);
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo-text h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 2px;
+  color: #e2eec2;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-status {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2eec2;
+}
+
+.admin-status i {
+  font-size: 1.2rem;
+  color: #e2eec2;
+}
+
+.language-dropdown select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #CFE1B9;
+  font-weight: bold;
+}
+
+
+.main-panel {
+  flex: 1;
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+}
+
+
+.admin-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 75%;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--dark2);
+  margin-bottom: 30px;
+}
+
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.panel-link {
+  background-color: var(--mid2);
+  color: white;
+  text-decoration: none;
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.panel-link i {
+  font-size: 1.3rem;
+}
+
+.panel-link:hover {
+  background-color: var(--dark1);
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+.right-panel {
+  flex: 1;
+  background: url('images/book1.png') no-repeat right bottom;
+  background-size: auto 100%;
+  background-position: right bottom;
+}
+
+
+.footer {
+  background-color: rgba(113, 131, 85, 0.9);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}

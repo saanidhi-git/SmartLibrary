@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PVGCOET Library System</title>
+  <link rel="stylesheet" href="mainpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="SmartLib Logo">
+      <div class="logo-text">
+        <h1>PVGCOET</h1>
+        <p class="subtitle">Library Management System</p>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="dark-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <span>🌙</span>
+      </div>
+      <div class="language-dropdown">
+        <select>
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+        </select>
+      </div>
+      <div class="auth-buttons">
+        <a href="#" class="btn" onclick="document.getElementById('loginOverlay').style.display = 'flex'">Login</a>
+        <a href="#" class="btn" onclick="document.getElementById('signupOverlay').style.display = 'flex'">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  
+  <main class="main-home">
+    <h1 class="college-name">PVGCOET Library</h1>
+    <p class="slogan">विद्वान सर्वत्र पुज्यते</p>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search by title, author, subject..." />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </main>
+
+  
+  <section class="carousel-section">
+    <h2>Highly Recommened!</h2>
+    <div class="carousel-track">
+      <div class="book-card"><img src="SmartLib(Data)/Dept of EE/Digital Signal Processing.png" alt="DSP"><p>Electrical Engineering</p></div>
+      <div class="book-card"><img src="SmartLib(Data)/Dept of PG/Marketing Management.png" alt="Marketing"><p>MBA</p></div>
+      <div class="book-card"><img src="SmartLib(Data)/Dept of CS/AI A Mordern Approach.png" alt="AI"><p>AI Engineering</p></div>
+      <div class="book-card"><img src="SmartLib(Data)/Literature Section/The Hobbit.png" alt="Hobbit"><p>Literature</p></div>
+    </div>
+  </section>
+
+ 
+  <section class="stats-section">
+    <h2>Library Insights</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><h3>12,000+</h3><p>Books Available</p></div>
+      <div class="stat-card"><h3>1,500+</h3><p>Active Readers</p></div>
+      <div class="stat-card"><h3>98%</h3><p>Renewal Success Rate</p></div>
+      <div class="stat-card"><h3>25+</h3><p>Departments Served</p></div>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    © 2025 PVGCOET Library System. All rights reserved.
+  </footer>
+
+ 
+  <div class="login-overlay" id="loginOverlay" style="display: none;">
+    <div class="login-box">
+      <span class="close-btn" onclick="closeLogin()">&times;</span>
+      <img src="images/logo.jpg" alt="Library Logo">
+      <h2>Login to SmartLib</h2>
+      <form>
+        <label for="role">Select Role:</label>
+        <select id="role" required>
+          <option value="">-- Choose Role --</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" placeholder="Enter your ID" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="login-overlay" id="signupOverlay" style="display: none;">
+    <div class="login-box">
+      <span class="close-btn" onclick="closeSignup()">&times;</span>
+      <img src="images/logo.jpg" alt="Library Logo">
+      <h2>Sign Up for SmartLib</h2>
+      <form>
+        <label for="signupRole">Select Role:</label>
+        <select id="signupRole" required>
+          <option value="">-- Choose Role --</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+        <button type="submit" class="login-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      toggle.checked = true;
+    }
+
+    function closeLogin() {
+      document.getElementById('loginOverlay').style.display = 'none';
+    }
+
+    function closeSignup() {
+      document.getElementById('signupOverlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,271 @@
+:root {
+  --light1: #E9F5DB;
+  --mid1: #B5C99A;
+  --mid2: #97A97C;
+  --dark1: #87986A;
+  --dark2: #718355;
+  --text: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background:
+    linear-gradient(to right, rgba(233,245,219,0.85), rgba(181,201,154,0.85)),
+    url('images/library_bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgba(113, 131, 85, 0.95);
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo-text h1 {
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #e2eec2;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-dropdown select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #CFE1B9;
+  font-weight: bold;
+}
+
+.auth-buttons .btn {
+  background-color: var(--mid2);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+  background-color: var(--dark1);
+}
+
+.dark-toggle {
+  background-color: var(--mid2);
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dark-toggle input {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.main-home {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.college-name {
+  font-size: 2.5rem;
+  color: var(--dark2);
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  color: var(--dark1);
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--mid2);
+  flex: 1;
+  min-width: 0;
+}
+
+.search-bar button {
+  padding: 12px 16px;
+  background-color: var(--mid2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: var(--dark1);
+}
+
+.carousel-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.carousel-section h2 {
+  font-size: 2rem;
+  color: var(--dark2);
+  margin-bottom: 30px;
+}
+
+.carousel-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 60px;
+}
+
+.book-card {
+  width: 100%;
+  background-color: var(--mid2);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  backdrop-filter: blur(6px);
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.book-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.stats-section {
+  padding: 40px;
+  background-color: rgba(255,255,255,0.85);
+  text-align: center;
+}
+
+.stats-section h2 {
+  font-size: 2rem;
+  color: var(--dark2);
+  margin-bottom: 30px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: var(--mid1);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: rgba(113, 131, 85, 0.9);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+body.dark {
+  background: #1e1e1e;
+  color: #f2f2f2;
+}
+
+body.dark .header,
+body.dark .footer {
+  background-color: #2e3c1e;
+}
+
+body.dark .book-card,
+body.dark .stat-card {
+  background-color: #3b4e2e;
+  color: white;
+}
+
+body.dark input,
+body.dark button,
+body.dark select {
+  background-color: #2e3c1e;
+  color: #e2eec2;
+}

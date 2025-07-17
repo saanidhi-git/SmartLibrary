@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SmartLib</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-box">
+      <span class="close-btn" onclick="closeLogin()">&times;</span>
+      <h2>Login to SmartLib</h2>
+      <form>
+        <label for="role">Select Role:</label>
+        <select id="role" required>
+          <option value="">-- Choose Role --</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" placeholder="Enter your ID" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function closeLogin() {
+      document.getElementById("loginOverlay").style.display = "none";
+    }
+  </script>
+</body>
+</html>
+

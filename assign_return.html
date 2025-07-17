@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assign & Return Books – PVGCOET Admin Panel</title>
+  <link rel="stylesheet" href="assign_return.css" />
+  
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Logo" />
+      <div class="logo-text">
+        <h1>PVGCOET Admin Panel</h1>
+        <p class="subtitle">Library System – Assign & Return</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="dark-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <span>🌙</span>
+      </div>
+      <div class="language-dropdown">
+        <select>
+          <option>English</option>
+          <option>हिंदी</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="content-card">
+      <h2>Manage Book Assign & Returns</h2>
+      <form class="assign-form">
+        <input type="text" placeholder="Student ID" />
+        <input type="text" placeholder="Book ID / Title" />
+        <input type="date" placeholder="Assign Date" />
+        <input type="date" placeholder="Return Date" />
+        <button type="submit">Assign Book</button>
+      </form>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Book</th>
+              <th>Issued</th>
+              <th>Due</th>
+              <th>Return</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>S123 – Ananya P.</td>
+              <td>AI For Beginners</td>
+              <td>01 July</td>
+              <td>15 July</td>
+              <td><button class="return-btn">Return</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025  PVGCOET Library System.
+  </footer>
+  
+
+</body>
+</html>
+

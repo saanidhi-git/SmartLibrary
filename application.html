@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Applications – PVGCOET Admin Panel</title>
+  <link rel="stylesheet" href="application.css">
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="SmartLib Logo">
+      <div class="logo-text">
+        <h1>PVGCOET Admin Panel</h1>
+        <p class="subtitle">Admin Panel – Applications</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="dark-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <span>🌙</span>
+      </div>
+      <div class="admin-status">
+        <i class="fas fa-user-shield"></i> Logged in as <strong>Admin</strong>
+      </div>
+      <div class="language-dropdown">
+        <select>
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+ 
+  <main class="main-content">
+    <div class="application-card">
+      <h2>Late Return Applications</h2>
+
+      <div class="filters">
+        <input type="text" placeholder="Search student or book...">
+        <select>
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="rejected">Rejected</option>
+        </select>
+      </div>
+
+      <!-- Applications Table -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Book</th>
+              <th>Reason</th>
+              <th>Submitted On</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>S12345 – Rahul Joshi</td>
+              <td>Signals & Systems</td>
+              <td>
+                <select disabled>
+                  <option selected>Exam Pressure</option>
+                  <option>Medical Reason</option>
+                  <option>Personal Emergency</option>
+                  <option>Technical Issue</option>
+                  <option>Travel/Out of Station</option>
+                  <option>Other (custom reason)</option>
+                </select>
+              </td>
+              <td>2025-07-10</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+              </td>
+            </tr>
+            <tr>
+              <td>S12678 – Anjali Kulkarni</td>
+              <td>Digital Circuits</td>
+              <td>
+                <select disabled>
+                  <option selected>Medical Reason</option>
+                  <option>Exam Pressure</option>
+                  <option>Personal Emergency</option>
+                  <option>Technical Issue</option>
+                  <option>Travel/Out of Station</option>
+                  <option>Other (custom reason)</option>
+                </select>
+              </td>
+              <td>2025-07-08</td>
+              <td><span class="status approved">Approved</span></td>
+              <td>
+                <button class="approve-btn" disabled>Approved</button>
+                <button class="reject-btn" disabled>Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+ 
+  <footer class="footer">
+    © 2025  PVGCOET Library System. All rights reserved.
+  </footer>
+  
+
+</body>
+</html>
